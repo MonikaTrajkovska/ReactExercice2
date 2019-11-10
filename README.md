@@ -1,1 +1,2 @@
-# ReactExercice2
+# my-app
+ my-app
