@@ -1,49 +1,40 @@
  import React from 'react'
- import Footer from './components/Footer'
- import MyInfo from './components/MyInfo'
- import Box from './components/Box'
- import Moni from './components/Moni'
- import Joke from './components/Joke'
-//  import Products from './components/Products'
-import todosData from './components/todosData'
-import Igor from './components/Igor'
-// import Conditional from './components/Conditional'
-import Api from './components/Api'
-import Form from './components/Form'
-import store from './component/store'
-
-import Post from './component/Post'
-import Postform from './component/Postform'
+// import Form from './components/Form'
+import Projects from './components/Projects'
 import  {Provider} from 'react-redux'
 
 
-
-
- function App(){
-
-    return(
-      
-     <div>
-       <MyInfo/>
-       <Footer/> 
-    <Box/>
-    <Moni/>
-    {/* <Conditional/> */}
-    <Igor/>
-    <Api/>
-    <Form/>
-    <hr/>
-    <Provider store={store}>
-    <Postform/>
-    <hr/>
-    <Post/>
-    </Provider>
-   
-    <Joke question="Kako si" answer="Dobro"/>
-    {/* <Products/> */}
-         
-         </div>
-     )
- }
+class App extends React.Component{
+  constructor(){
+      super()
+      this.state={
+          projects:[
+              {
+                  title:'Bussines Website',
+                  category:'Web Disgn'
+              },
+              {
+                  title:'Social App',
+                  category:'Mobile Development'
+              },
+              {
+                  title:'Shopping card',
+                  category:'Web development'
+              }
+          ]
+      }
+  }
+  render(){
+  return(
+      <React.Fragment>
+      <h1>Moni</h1>
+      <Projects projects={this.state.projects}/>
+      {/* <Form/> */}
+     
+      </React.Fragment>
+  )
+}
+}
+ 
 
 export default App
