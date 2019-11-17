@@ -37,7 +37,7 @@ render(){
                 </div>
                 <div>
                     <label>Surname</label>
-                    <input type='text' ref='surname'/>
+                    <input type='text' ref='surname' />
                 </div>
                 <input type='submit' value='submit'/>
             </form>
